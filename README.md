@@ -205,7 +205,7 @@ This is where I lost time. See below.
 
 ### Phase 7 — Cleanup
 
-Delete `rg-lab03-<yourname>`. Delete `rg-lab02-<yourname>` too unless Lab 04 needs `vm-web-01` — check first.
+Delete `rg-lab03-<yourname>`. Delete `rg-lab02-<yourname>` too.
 
 ![Resource groups before cleanup](screenshots/06-resource-groups.png)
 
