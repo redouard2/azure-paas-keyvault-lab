@@ -219,7 +219,7 @@ Still early on the cloud security side. Observations, not expert guidance:
 
 - **The password never touches the web server.** That's the point of the lab, and it's the pattern behind every "no secrets in code" policy I've ever read. Key Vault + Managed Identity is how it's actually done.
 - **Two roles, two scopes.** I hold Key Vault Administrator because I'm building the vault. The VM holds Key Vault Secrets User because it only reads. Least privilege isn't a principle here — it's two rows in an IAM blade.
-- **There's still a password.** The lab uses SQL authentication, so a credential exists and Key Vault guards it. The stronger pattern is **Entra-only authentication** on the SQL server with the VM's Managed Identity granted directly on the database — then there's no password to store at all. Jhante's doc picks SQL auth to keep the lab focused. A later lab should close that gap.
+- **There's still a password.** The lab uses SQL authentication, so a credential exists and Key Vault guards it. The stronger pattern is **Entra-only authentication** on the SQL server with the VM's Managed Identity granted directly on the database — then there's no password to store at all.
 - **"Allow Azure services and resources to access this server" is broader than it sounds.** It allows traffic from *any* Azure tenant's services, not just mine. For a lab, fine. For production: Private Endpoint, or at minimum a VNet rule scoped to `snet-web`.
 - **Key Vault is on all networks.** RBAC still gates access, but the vault's public endpoint is reachable from anywhere. Production answer is the same — Private Endpoint.
 - **Defender for SQL is off.** $15/month is the right call for a lab and the wrong call for anything real.
