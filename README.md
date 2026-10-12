@@ -282,7 +282,7 @@ Two different fields, two different things. The database field auto-fills with j
 - [Lab 001 — Azure Static Website Hosting](https://github.com/redouard2/azure-static-website-lab)
 - [Lab 002 — Two-Tier Web Application](https://github.com/redouard2/azure-2tier-vnet-lab)
 - **Lab 003 — PaaS Migration + Key Vault** ← *you are here*
-- Lab 004 — *coming soon*
+   - [Lab 004 — Infrastructure as Code with Terraform](https://github.com/redouard2/azure-terraform-lab)
 
 ---
 
